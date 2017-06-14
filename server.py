@@ -51,6 +51,9 @@ def create():
 
 @app.route('/users/<id>/destroy')
 def destroy(id):
+    query = "DELETE FROM users WHERE id = :id"
+    data = {"id": id}
+    mysql.query_db(query,data)
     return redirect('/users')
 
 @app.route('/update', methods =['POST'])
