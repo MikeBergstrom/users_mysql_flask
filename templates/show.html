@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>User {{user[0]['id']}}</h1><br>
+    Full Name: {{user[0]['first_name']}} {{user[0]['last_name']}}<br>
+    Email: {{user[0]['email']}}<br>
+    Created at: {{user[0]['created']}}<br>
+    <a href="http://localhost:5000/users/{{user[0]['id']}}/edit">Edit</a> <a href="http://localhost:5000/users/{{user[0]['id']}}/destroy">Delete</a>
+</body>

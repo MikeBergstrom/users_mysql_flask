@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Create User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Add a new user</h1>
+    <form action='/create' name="newuser" method="POST">
+        First Name:<input type="text" name="first">
+        Last Name:<input type="text" name="last">
+        Email Address:<input type="text" name="email">
+        <input type="submit" name="submit" value="Create">
+    </form>
+    <a href="http://localhost:5000/users">Go Back</a> 
+</body>
